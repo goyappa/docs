@@ -1,0 +1,30 @@
+---
+title: Calendar Accounts
+description:
+---
+
+All Yappa features require one or more Calendar Accounts to be set up. A Calendar Account is a connection to a calendar service provider - we currently support Google and Microsoft accounts (personal and work). More may be supported in the future.
+
+## Adding a Calendar Account
+
+To add a Calendar Account, navigate to the [Calendar Accounts](https://app.goyappa.com/calendar-accounts) page click on the "Add a calendar account" button. You can then choose which type of account you want to connect (Google or Microsoft) and follow the authorization process.
+
+![First step](/assets/calendar-accounts/choose-provider.png)
+
+Yappa will ask for permission to view and manage all the calendars in your account. This is necessary for Yappa to be able to retrieve as well as create and update events on your behalf. You can always revoke this permission through your Google or Microsoft account settings.
+
+As soon as Yappa is authorized, you will be redirected back to the Calendar Accounts page where you will see all the calendars that are available in the connected account.
+
+![Connected account](/assets/calendar-accounts/view-calendars.png)
+
+From this page you can change the following settings at a calendar level:
+
+* **Enabled**: If a calendar is enabled, Yappa will load events from it and make the calendar available for synchronizations.
+* **Color**: The color used to display events from this calendar on the Calendar page.
+
+## Reauthorization
+
+If Yappa has trouble accessing one of your Calendar Accounts, you will be prompted to reauthorize the account. This can happen if you revoke access to Yappa from your Google or Microsoft account settings or if the authorization expired. If this happens, the Calendar Accounts
+page will reflect the error state for that account.
+
+![Error state](/assets/calendar-accounts/reauthorization-required.png)

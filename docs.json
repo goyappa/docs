@@ -1,21 +1,37 @@
 {
-  "name": "My Docs",
-  "description": "My documentation site",
+  "name": "Yappa Docs",
+  "description": "Product documentation and guides",
+  "favicon": "https://goyappa.com/favicons/180x180.png",
   "sidebar": [
-  {
-    "group": "Getting Started",
-    "pages": [
-      {
-        "title": "Getting to know docs.page",
-        "href": "/",
-        "icon": "rocket"
-      },
-      {
-        "title": "Next Steps",
-        "href": "/next-steps",
-        "icon": "arrow-right"
-      }
-    ]
-  }
-]
+    {
+      "group": "Getting Started",
+      "pages": [
+        {
+          "title": "Welcome to Yappa!",
+          "href": "/",
+          "icon": "rocket"
+        },
+        {
+          "title": "Calendar Accounts",
+          "href": "/calendar-accounts",
+          "icon": "id-card"
+        },
+        {
+          "title": "Calendar View",
+          "href": "/calendar-view",
+          "icon": "calendar"
+        },
+        {
+          "title": "Time Tracking Events",
+          "href": "/time-tracking-events",
+          "icon": "clock"
+        },
+        {
+          "title": "Calendar Synchronizations",
+          "href": "/synchronizations",
+          "icon": "rotate"
+        }
+      ]
+    }
+  ]
 }

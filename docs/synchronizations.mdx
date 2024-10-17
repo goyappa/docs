@@ -1,0 +1,58 @@
+---
+title: Calendar Synchronizations
+description:
+---
+
+Calendar Synchronizations help you keep your calendars in sync across different calendar services. This is useful when:
+
+* you use multiple calendar services and want to see all your events in one place
+* you want to show your real availability in a client's calendar account without sharing your personal calendar
+* you want to keep your personal and work calendars separate
+
+... more
+
+
+## Overview
+
+During a Calendar Synchronization, event **clones** are created based on the Synchronization's configuration. A clone is a copy of an original event in a different calendar. A clone event contains minimal information:
+
+* start and end time
+* title (*)
+* description (*)
+* a link to the original event in the body of the description
+
+(*) These fields are optional and can be configured in the Synchronization settings. See the section on 'private mode'.
+
+A clone event will show you as 'Busy' for its duration. Furthermore, a clone event will **never** have other attendees, regardless of the original event's configuration. Simply put, the role of the clone is just to block your time in the target calendar.
+
+## Creating a Synchronization
+
+To create a new Calendar Synchronization, navigate to the [Synchronizations](https://app.goyappa.com/synchronizations) page and click on the "Add a synchronization" button. You will be presented with a form where you can configure the Synchronization.
+
+### General settings
+
+On the General tab you will find a number of settings which impact the information held by event clones, with a real-time preview of how the event will look in the target calendar.
+
+#### Private mode
+
+Private mode lets you create clone events that do not contain any identifiable information about the source event, namely title and description. Instead, the clone event will have a title of 'Busy'. This is useful when you want to keep the details of your original event private, such as when you wish to synchronize your
+personal calendar to your work one.
+
+**Note:** private mode applies to the entire synchronization. You cannot have some events synchronized in private mode and others not as part of the same synchronization.
+
+### Synchronization types
+
+There are two types of Synchronizations:
+* One-way
+* Multi-way
+
+#### One-way Synchronization
+
+A one-way Synchronization will create clone events in the target calendar(s) based on the events in the source calendar(s). 
+
+#### Multi-way Synchronization
+
+A multi-way Synchronization will create clone events in all calendars involved in the Synchronization, the end result being that all calendars in a Multi-Way Synchronization will show the same availability.
+
+
+**Note:** Event clones are not displayed on the Calendar View page. They are only visible in the target calendar(s).
