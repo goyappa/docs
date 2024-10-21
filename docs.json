@@ -30,6 +30,16 @@
           "title": "Calendar Synchronizations",
           "href": "/synchronizations",
           "icon": "rotate"
+        },
+        {
+          "title": "Projects and Clients",
+          "href": "/projects-and-clients",
+          "icon": "users"
+        },
+        {
+          "title": "Booking Links",
+          "href": "/booking-links",
+          "icon": "link"
         }
       ]
     }
