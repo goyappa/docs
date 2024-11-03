@@ -20,7 +20,62 @@ As soon as Yappa is authorized, you will be redirected back to the Calendar Acco
 From this page you can change the following settings at a calendar level:
 
 * **Enabled**: If a calendar is enabled, Yappa will load events from it and make the calendar available for synchronizations.
+* **Private**: Private calendars restrict the set of event fields that are loaded from the calendar provider. More information in the section below.
 * **Color**: The color used to display events from this calendar on the Calendar page.
+
+
+## Calendar privacy
+
+When you set a calendar to “private” in Yappa, fewer event details are retrieved from the calendar provider. This keeps certain event information hidden within Yappa itself, as well as in any synchronized or linked calendars.
+
+In Yappa’s Calendar View, events from private calendars appear only with the title *Private* and do not display any additional details, like the description or location.
+
+**Note**: Yappa may still store more detailed information for events it directly creates, even if the calendar is private. Examples include:
+
+* Cloned events created during calendar synchronizations.
+* Bookings made through Yappa’s Booking Links feature.
+
+This is because Yappa originates these events and sends this information to the calendar provider, rather than just reading it from an existing event. However, any **read-only** actions (retrieving existing event data) will respect the privacy setting, meaning Yappa will only access the allowed fields.
+
+### Google
+
+When Yappa reads data from a Google Calendar, it uses the `fields` query parameter to limit which data points it retrieves:
+
+| Field | Private = off | Private = on |
+|-------|---------------|--------------|
+| id | ✅ | ✅ |
+| status | ✅ | ✅ |
+| start | ✅ | ✅ |
+| end | ✅ | ✅ |
+| transparency | ✅ | ✅ |
+| summary | ✅ | ❌ |
+| description | ✅ | ❌ |
+| location | ✅ | ❌ |
+| attendees | ✅ | ❌ |
+| htmlLink | ✅ | ❌ |
+
+For more information, see the [Google Calendar API documentation](https://developers.google.com/calendar/v3/reference/events).
+
+
+### Microsoft
+
+When Yappa reads data from a Microsoft Calendar, it uses the `$select` query parameter to limit which data points it retrieves:
+
+| Field | Private = off | Private = on |
+|-------|---------------|--------------|
+| id | ✅ | ✅ |
+| responseStatus | ✅ | ✅ |
+| start | ✅ | ✅ |
+| end | ✅ | ✅ |
+| showAs | ✅ | ✅ |
+| isAllDay | ✅ | ✅ |
+| subject | ✅ | ❌ |
+| bodyPreview | ✅ | ❌ |
+| location | ✅ | ❌ |
+| attendees | ✅ | ❌ |
+| webLink | ✅ | ❌ |
+
+For more information, see the [Microsoft Graph API documentation](https://docs.microsoft.com/en-us/graph/api/resources/event?view=graph-rest-1.0).
 
 ## Reauthorization
 
@@ -28,3 +83,5 @@ If Yappa has trouble accessing one of your Calendar Accounts, you will be prompt
 page will reflect the error state for that account.
 
 ![Error state](/assets/calendar-accounts/reauthorization-required.png)
+
+
