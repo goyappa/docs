@@ -9,6 +9,22 @@ Time Tracking Events let you track activities outside Calendar Events. Depending
 
 **Note**: Time Tracking Events only exist in Yappa and are not pushed to any of your calendars.
 
-You can create a Time Tracking Event straight from the Calendar View, by pressing Start and adding a title to the event. Then, when your task is over, you can press Stop. Time Tracking Events can be edited later to add more details, such as a description, refine the start and end time, and assign the event to a Project.
+You can create a Time Tracking Event straight from the Calendar View, by pressing Start and adding a title to the event. Once started, you can repeatedly pause and resume that event - every time you do this, a `segment` is created - you can use this to not record time spent on breaks, for example. Then, when your task is over, you can press Stop.
 
-![Time Tracking Event](/assets/calendar-view/time-tracking-event.png)
+![Running Time Tracking Event](/assets/time-tracking-events/time-tracking-event-running.png)
+
+![Paused Time Tracking Event](/assets/time-tracking-events/time-tracking-event-paused.png)
+
+The time displayed on the Time Tracking Event is the total time spent on the task, including all segments. The time between the segments (i.e. while the event was Paused) is not included in the total time.
+
+**Note**: In some cases, you may see the time measured jumping by +/- 1 minute when you pause or resume an event. This is due to the way the time is rounded and displayed in the UI.
+
+## Segments
+
+Segments of a time tracking event are displayed separately in Calendar View, as if they were separate events.
+
+![Segments in Calendar View](/assets/time-tracking-events/segments-in-calendar-view.png)
+
+However, the segments do represent the same Time Tracking Event, meaning that the Edit view of any segment will show the same details. From here, segments can be adjusted or deleted.
+
+![Segments in Edit](/assets/time-tracking-events/segments-in-edit.png)
