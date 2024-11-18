@@ -40,6 +40,11 @@
           "title": "Booking Links",
           "href": "/booking-links",
           "icon": "link"
+        },
+        {
+          "title": "NEW: Contract Reviews",
+          "href": "/contract-reviews",
+          "icon": "file-signature"
         }
       ]
     }
